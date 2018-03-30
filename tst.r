@@ -22,7 +22,7 @@ dx = dim(x);
 
 pairs = compare.linkage (x, x, exclude=c(6),strcmp=c(1:5),strcmpfun = jarowinkler);
 #predict and write out matches
-lbl0 = paste(pairs$data1[pairs$pairs$id1,6], pairs$data2[pairs$pairs$id2,6], sep=";")
+lbl0 = paste(pairs$data1[pairs$pairs$id1,6], pairs$data2[pairs$pairs$id2,6], sep="||")
 #comm.print(lbl0[1:2], all.rank=TRUE)
 
 lbl = c()
@@ -67,7 +67,7 @@ for (i in 1:nc){
   message.pass(i);
   x1=message.get(i);
   pairs = compare.linkage (x, x1, exclude=c(6),strcmp=c(1:5),strcmpfun = jarowinkler);
-  lbl1 = paste(pairs$data1[pairs$pairs$id1,6], pairs$data2[pairs$pairs$id2,6], sep=";");
+  lbl1 = paste(pairs$data1[pairs$pairs$id1,6], pairs$data2[pairs$pairs$id2,6], sep="||");
   for (id in 1:dim(pairs$data1)[1]){
     mm = pairs$pairs$id1 == id;
     mm0 = (1:50)+(id-1)*50;
@@ -85,7 +85,7 @@ for (i in 1:nc){
 #comm.print(lbl[1:10,], all.rank=TRUE)
 
 fname=paste("outL",comm.rank(),sep=".");
-fwrite(data.frame(lbl),file=fname, sep="||",quote=FALSE);
+fwrite(data.frame(lbl),file=fname, sep=";",quote=FALSE);
 fname=paste("outV",comm.rank(),sep=".");
 fwrite(data.frame(val),file=fname, sep=";",quote=FALSE);
 

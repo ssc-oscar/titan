@@ -3,10 +3,10 @@
 #PBS -A csc229
 #PBS -N testpbdR_out
 #PBS -j oe
-#PBS -l walltime=01:00:00,nodes=100
+#PBS -l walltime=01:00:00,nodes=10
 #PBS -l gres=atlas1%atlas2
 module load r/3.3.2x
 cd $MEMBERWORK/csc229/id
 #date
-export OMP_NUM_THREADS=1600
-aprun -n 1600 -N16 Rscript tst.r 
+export OMP_NUM_THREADS=160
+aprun -n 160 -N16 Rscript tst.r 
