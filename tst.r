@@ -83,9 +83,10 @@ for (i in 1:nc){
 }
 
 #comm.print(lbl[1:10,], all.rank=TRUE)
-
-fname=paste("outL",comm.rank(),sep=".");
-fwrite(data.frame(lbl),file=fname, sep=";",quote=FALSE);
-fname=paste("outV",comm.rank(),sep=".");
-fwrite(data.frame(val),file=fname, sep=";",quote=FALSE);
-
+barrier();
+myrank=comm.rank();
+fnamel=paste("outL",myrank,sep=".");
+fwrite(data.frame(lbl),file=fnamel, sep=";",quote=FALSE);
+fnamev=paste("outV",myrank,sep=".");
+fwrite(data.frame(val),file=fnamev, sep=";",quote=FALSE);
+barrier();
