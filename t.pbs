@@ -1,0 +1,17 @@
+#!/bin/bash
+# File name: my-job-name.pbs
+
+#PBS -N tdNNN.MMM
+#PBS -A csc229
+#PBS -l walltime=2:00:00
+#PBS -l nodes=4
+#PBS -l gres=atlas1%atlas2
+
+
+c=$MEMBERWORK/csc229/id
+#c=/lustre/atlas2/csc229/scratch/audris1/id
+cd $c
+export MPICH_CPUMASK_DISPLAY=1
+export MPICH_RANK_REORDER_DISPLAY=1
+aprun -n 64 -N 16 ./doKnlStrT.sh $c NNN.MMM 
+

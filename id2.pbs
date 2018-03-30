@@ -1,0 +1,10 @@
+#PBS -N id.NNN
+#PBS -A ACF-UTK0011
+#PBS -l feature=knl
+#PBS -l partition=knl
+#PBS -l nodes=1:ppn=64,walltime=23:50:00
+#PBS -j oe
+#PBS -S /bin/bash
+c=/lustre/haven/user/audris/id
+cd $c
+$HOME/bin/doKnlStr2.sh $c NNN 
