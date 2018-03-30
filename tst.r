@@ -22,7 +22,9 @@ dx = dim(x);
 
 pairs = compare.linkage (x, x, exclude=c(6),strcmp=c(1:5),strcmpfun = jarowinkler);
 #predict and write out matches
-lbl0 = paste(pairs$data1[pairs$pairs$id1,"V6"], pairs$data2[pairs$pairs$id2,"V6"], collapse=";")
+lbl0 = paste(pairs$data1[pairs$pairs$id1,6], pairs$data2[pairs$pairs$id2,6], sep=";")
+#comm.print(lbl0[1:2], all.rank=TRUE)
+
 lbl = c()
 val = c()
 for (id in 1:dim(pairs$data1)[1]){
@@ -33,6 +35,7 @@ for (id in 1:dim(pairs$data1)[1]){
     val0 = pairs$pairs[mm,2+j];
     oo = order(val0,decreasing=T);
     lbli = cbind(lbli,lbl0[mm][oo][1:50]);
+    #if (j==5) comm.print(lbli[1:2,], all.rank=TRUE)
     vali = cbind(vali, val0[oo][1:50]);
   }
   lbl = rbind(lbl, lbli);
@@ -56,7 +59,7 @@ message.get <- function(off=1) {
  myrank <- comm.rank();
  otherrank <- (myrank-off) %% comm.size();
  # Receive the message
- #comm.print(paste("about to rcv from ", c(myrank,otherrank)), all.rank=TRUE)
+ comm.print(paste("about to rcv ", paste(myrank,otherrank)))
  irecv(rank.source=otherrank);
 }
 nc = ceiling(comm.size()-1);
@@ -64,7 +67,7 @@ for (i in 1:nc){
   message.pass(i);
   x1=message.get(i);
   pairs = compare.linkage (x, x1, exclude=c(6),strcmp=c(1:5),strcmpfun = jarowinkler);
-  lbl1 = paste(pairs$data1[pairs$pairs$id1,"V6"], pairs$data2[pairs$pairs$id2,"V6"], collapse=";");
+  lbl1 = paste(pairs$data1[pairs$pairs$id1,6], pairs$data2[pairs$pairs$id2,6], sep=";");
   for (id in 1:dim(pairs$data1)[1]){
     mm = pairs$pairs$id1 == id;
     mm0 = (1:50)+(id-1)*50;
@@ -79,8 +82,10 @@ for (i in 1:nc){
   #predict and write out matches
 }
 
-fname=paste("outL",comm.rank(),colllapse=".");
-fwrite(lbl,fname=fname,ncol=5, sep=";",quote="");
-fname=paste("outV",comm.rank(),colllapse=".");
-fwrite(val,fname=fname,ncol=5, sep=";",quote="");
+#comm.print(lbl[1:10,], all.rank=TRUE)
+
+fname=paste("outL",comm.rank(),sep=".");
+fwrite(data.frame(lbl),file=fname, sep="||",quote=FALSE);
+fname=paste("outV",comm.rank(),sep=".");
+fwrite(data.frame(val),file=fname, sep=";",quote=FALSE);
 
