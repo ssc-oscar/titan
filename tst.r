@@ -5,11 +5,15 @@ suppressMessages(library(pbdIO,quietly = TRUE))
 suppressMessages(library('data.table', quietly = TRUE))
 suppressMessages(library('RecordLinkage', lib.loc="./R/x86_64-pc-linux-gnu-library/3.3", quietly = TRUE))
 
+#init.grid()
 
 x = comm.fread ("auth1", pattern="*",quote="",sep=",")
 names(x) = c("un","n","fn","ln","e","a");
-x = x[,c("n", "e", "ln", "fn", "un", "a")];
-dx = dim(x);
+x =  x[,c("n", "e", "ln", "fn", "un", "fn","a")];
+x1 = x[,c("n", "e", "ln", "fn", "un", "ln","a")];
+names(x)=c("n", "e", "ln", "fn", "un", "ifn","a")
+names(x1)=c("n", "e", "ln", "fn", "un", "ifn","a")
+#dx = dim(x);
 #comm.print(dx, all.rank=TRUE)
 
 
@@ -20,9 +24,9 @@ dx = dim(x);
 #tandem.webdev,Agence-Tandem,Agence-Tandem,Agence-Tandem,tandem.webdev@gmail.com,Agence-Tandem <tandem.webdev@gmail.com>
 #
 
-pairs = compare.linkage (x, x, exclude=c(6),strcmp=c(1:5),strcmpfun = jarowinkler);
+pairs = compare.linkage (x, x1, exclude=c(7),strcmp=c(1:6),strcmpfun = jarowinkler);
 #predict and write out matches
-lbl0 = paste(pairs$data1[pairs$pairs$id1,6], pairs$data2[pairs$pairs$id2,6], sep="||")
+lbl0 = paste(pairs$data1[pairs$pairs$id1,7], pairs$data2[pairs$pairs$id2,7], sep="||")
 #comm.print(lbl0[1:2], all.rank=TRUE)
 
 lbl = c()
@@ -30,7 +34,7 @@ val = c()
 for (id in 1:dim(pairs$data1)[1]){
   lbli = c();
   vali = c();
-  for (j in 1:5){
+  for (j in 1:6){
     mm = pairs$pairs$id1 == id;
     val0 = pairs$pairs[mm,2+j];
     oo = order(val0,decreasing=T);
@@ -52,7 +56,7 @@ message.pass <- function(off=1) {
  otherrank <- (myrank+off) %% comm.size()
  # Send a message to the partner
  #comm.print(paste("passed to ",c(myrank,otherrank)),all.rank=TRUE)
- isend (x, rank.dest=otherrank);
+ isend (x1[,c("n", "e", "ln", "fn", "un", "ifn","a")], rank.dest=otherrank);
 }
 
 message.get <- function(off=1) {
@@ -66,12 +70,12 @@ nc = ceiling(comm.size()-1);
 for (i in 1:nc){
   message.pass(i);
   x1=message.get(i);
-  pairs = compare.linkage (x, x1, exclude=c(6),strcmp=c(1:5),strcmpfun = jarowinkler);
-  lbl1 = paste(pairs$data1[pairs$pairs$id1,6], pairs$data2[pairs$pairs$id2,6], sep="||");
+  pairs = compare.linkage (x, x1, exclude=c(7),strcmp=c(1:6),strcmpfun = jarowinkler);
+  lbl1 = paste(pairs$data1[pairs$pairs$id1,7], pairs$data2[pairs$pairs$id2,7], sep="||");
   for (id in 1:dim(pairs$data1)[1]){
     mm = pairs$pairs$id1 == id;
     mm0 = (1:50)+(id-1)*50;
-    for (j in 1:5){
+    for (j in 1:6){
       val1 = pairs$pairs [mm,2+j];
       val0 = val [mm0, j];
       oo = order(c(val0,val1),decreasing=T);
@@ -90,3 +94,4 @@ fwrite(data.frame(lbl),file=fnamel, sep=";",quote=FALSE);
 fnamev=paste("outV",myrank,sep=".");
 fwrite(data.frame(val),file=fnamev, sep=";",quote=FALSE);
 barrier();
+#finalize();
