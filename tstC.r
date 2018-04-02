@@ -6,6 +6,7 @@ suppressMessages(library('data.table', quietly = TRUE))
 suppressMessages(library('RecordLinkage', lib.loc="./R/x86_64-pc-linux-gnu-library/3.3", quietly = TRUE))
 
 #init.grid()
+init();
 
 x = comm.fread ("auth1", pattern="*",quote="",sep=",")
 names(x) = c("un","n","fn","ln","e","a");
@@ -103,4 +104,4 @@ fwrite(data.frame(lbl),file=fnamel, sep=";",quote=FALSE);
 fnamev=paste("outCV",myrank,sep=".");
 fwrite(data.frame(val),file=fnamev, sep=";",quote=FALSE);
 barrier();
-#finalize();
+finalize();
