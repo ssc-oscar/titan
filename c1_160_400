@@ -1,0 +1,456 @@
+Swapping PrgEnv-pgi for PrgEnv-gnu
+R version 5.2.82
+Parallel Batch Use (see r-pbd.org) via mpirun Rscript.
+Example: aprun -n 2 Rscript myscript.r
+OMP_NUM_THREADS set to 1. Change as needed to use Cray SciLib.
+START 1522761769
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+[1] 10
+[1] 11
+[1] 12
+[1] 13
+[1] 14
+[1] 15
+[1] 16
+[1] 17
+[1] 18
+[1] 19
+[1] 20
+[1] 21
+[1] 22
+[1] 23
+[1] 33
+[1] 34
+[1] 35
+[1] 36
+[1] 37
+[1] 38
+[1] 39
+[1] 40
+[1] 24
+[1] 25
+[1] 26
+[1] 27
+[1] 28
+[1] 29
+[1] 30
+[1] 31
+[1] 32
+[1] 49
+[1] 41
+[1] 42
+[1] 43
+[1] 44
+[1] 45
+[1] 46
+[1] 47
+[1] 48
+[1] 65
+[1] 66
+[1] 67
+[1] 68
+[1] 69
+[1] 70
+[1] 71
+[1] 72
+[1] 81
+[1] 82
+[1] 83
+[1] 84
+[1] 85
+[1] 86
+[1] 73
+[1] 74
+[1] 75
+[1] 76
+[1] 77
+[1] 78
+[1] 79
+[1] 80
+[1] 97
+[1] 98
+[1] 99
+[1] 100
+[1] 101
+[1] 102
+[1][1] 87
+[1] 88
+[1] 89
+[1] 90
+[1] 91
+[1] 92
+[1] 93
+[1] 94
+[1] 95
+[1] 96
+ 103
+[1] 113
+[1] 114
+[1] 115
+[1] 116
+[1][1] 104
+[1] 105
+[1] 106
+[1] 107
+[1] 108
+[1] 109
+[1] 110
+[1] 111
+[1] 112
+ 117
+[1] 50
+[1] 51
+[1] 52
+[1] 53
+[1] 54
+[1] 55
+[1] 56
+[1] 57
+[1] 58
+[1] 59
+[1] 60
+[1] 61
+[1] 62
+[1] 63
+[1] 64
+[1] 129
+[1] 130
+[1] 131
+[1] 132
+[1] 118
+[1] 119
+[1] 120
+[1] 121
+[1] 122
+[1] 123
+[1] 124
+[1] 125
+[1] 126
+[1] 127
+[1] 128
+[1] 133
+[1] 145
+[1] 146
+[1] 147
+[1] 148
+[1] 149
+[1] 134
+[1] 135
+[1] 136
+[1] 137
+[1] 138
+[1] 139
+[1] 140
+[1] 141
+[1] 142
+[1] 143
+[1] 144
+[1] 150
+[1] 151
+[1] 152
+[1] 153
+[1] 154
+[1] 155
+[1] 156
+[1] 157
+[1] 158
+[1] 159
+[1] 160
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] 3986 3986    9
+[1] "about to rcv  0 159"
+[1] 305 305   9
+[1] "about to rcv  0 158"
+[1] 321 321   9
+[1] "about to rcv  0 157"
+[1] 408 408   9
+[1] "about to rcv  0 156"
+[1] 738 738   9
+[1] "about to rcv  0 155"
+[1] 423 423   9
+[1] "about to rcv  0 154"
+[1] 203 203   9
+[1] "about to rcv  0 153"
+[1] 472 472   9
+[1] "about to rcv  0 152"
+[1] 274 274   9
+[1] "about to rcv  0 151"
+[1] 321 321   9
+[1] "about to rcv  0 150"
+[1] 188 188   9
+[1] "about to rcv  0 149"
+[1] 252 252   9
+[1] "about to rcv  0 148"
+[1] 334 334   9
+[1] "about to rcv  0 147"
+[1] 220 220   9
+[1] "about to rcv  0 146"
+[1] 235 235   9
+[1] "about to rcv  0 145"
+[1] 305 305   9
+[1] "about to rcv  0 144"
+[1] 904 904   9
+[1] "about to rcv  0 143"
+[1] 772 772   9
+[1] "about to rcv  0 142"
+[1] 343 343   9
+[1] "about to rcv  0 141"
+[1] 356 356   9
+[1] "about to rcv  0 140"
+[1] 171 171   9
+[1] "about to rcv  0 139"
+[1] 187 187   9
+[1] "about to rcv  0 138"
+[1] 123 123   9
+[1] "about to rcv  0 137"
+[1] 515 515   9
+[1] "about to rcv  0 136"
+[1] 871 871   9
+[1] "about to rcv  0 135"
+[1] 381 381   9
+[1] "about to rcv  0 134"
+[1] 155 155   9
+[1] "about to rcv  0 133"
+[1] 354 354   9
+[1] "about to rcv  0 132"
+[1] 351 351   9
+[1] "about to rcv  0 131"
+[1] 578 578   9
+[1] "about to rcv  0 130"
+[1] 731 731   9
+[1] "about to rcv  0 129"
+[1] 470 470   9
+[1] "about to rcv  0 128"
+[1] 219 219   9
+[1] "about to rcv  0 127"
+[1] 606 606   9
+[1] "about to rcv  0 126"
+[1] 578 578   9
+[1] "about to rcv  0 125"
+[1] 742 742   9
+[1] "about to rcv  0 124"
+[1] 240 240   9
+[1] "about to rcv  0 123"
+[1] 651 651   9
+[1] "about to rcv  0 122"
+[1] 244 244   9
+[1] "about to rcv  0 121"
+[1] 871 871   9
+[1] "about to rcv  0 120"
+[1] 125 125   9
+[1] "about to rcv  0 119"
+[1] 457 457   9
+[1] "about to rcv  0 118"
+[1] 290 290   9
+[1] "about to rcv  0 117"
+[1] 699 699   9
+[1] "about to rcv  0 116"
+[1] 356 356   9
+[1] "about to rcv  0 115"
+[1] 377 377   9
+[1] "about to rcv  0 114"
+[1] 182 182   9
+[1] "about to rcv  0 113"
+[1] 89 89  9
+[1] "about to rcv  0 112"
+[1] 334 334   9
+[1] "about to rcv  0 111"
+[1] 235 235   9
+[1] "about to rcv  0 110"
+[1] 788 788   9
+[1] "about to rcv  0 109"
+[1] 304 304   9
+[1] "about to rcv  0 108"
+[1] 196 196   9
+[1] "about to rcv  0 107"
+[1] 623 623   9
+[1] "about to rcv  0 106"
+[1] 321 321   9
+[1] "about to rcv  0 105"
+[1] 396 396   9
+[1] "about to rcv  0 104"
+[1] 761 761   9
+[1] "about to rcv  0 103"
+[1] 658 658   9
+[1] "about to rcv  0 102"
+[1] 391 391   9
+[1] "about to rcv  0 101"
+[1] 738 738   9
+[1] "about to rcv  0 100"
+[1] 414 414   9
+[1] "about to rcv  0 99"
+[1] 826 826   9
+[1] "about to rcv  0 98"
+[1] 526 526   9
+[1] "about to rcv  0 97"
+[1] 399 399   9
+[1] "about to rcv  0 96"
+[1] 4385 4385    9
+[1] "about to rcv  0 95"
+[1] 478 478   9
+[1] "about to rcv  0 94"
+[1] 826 826   9
+[1] "about to rcv  0 93"
+[1] 352 352   9
+[1] "about to rcv  0 92"
+[1] 336 336   9
+[1] "about to rcv  0 91"
+[1] 423 423   9
+[1] "about to rcv  0 90"
+[1] 321 321   9
+[1] "about to rcv  0 89"
+[1] 761 761   9
+[1] "about to rcv  0 88"
+[1] 415 415   9
+[1] "about to rcv  0 87"
+[1] 887 887   9
+[1] "about to rcv  0 86"
+[1] 188 188   9
+[1] "about to rcv  0 85"
+[1] 793 793   9
+[1] "about to rcv  0 84"
+[1] 304 304   9
+[1] "about to rcv  0 83"
+[1] 711 711   9
+[1] "about to rcv  0 82"
+[1] 761 761   9
+[1] "about to rcv  0 81"
+[1] 305 305   9
+[1] "about to rcv  0 80"
+[1] 423 423   9
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+Written 39.4% of 85263 rows in 2 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=38%. Finished in 3 secs.                                                                                                                                           Written 35.9% of 93565 rows in 2 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 3 secs.                                                                                                                                           Written 31.0% of 109157 rows in 2 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 4 secs.                                                                                                                                           Written 23.5% of 142886 rows in 2 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=41%. Finished in 6 secs.      Written 30.8% of 109711 rows in 2 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=37%. Finished in 4 secs.      Written 20.7% of 163476 rows in 2 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=36%. Finished in 7 secs.                                                                                                                                                                                                                                                                                                                                                                                                                     Written 28.7% of 116762 rows in 2 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=38%. Finished in 4 secs.                                                                                                                                           Written 32.4% of 102588 rows in 2 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=37%. Finished in 4 secs.      Written 33.8% of 99235 rows in 2 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=32%. Finished in 3 secs.      Written 40.6% of 93014 rows in 2 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=20%. Finished in 2 secs.                                                                                                                                           Written 49.2% of 68205 rows in 2 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 2 secs.                                                                                                                                                                                                                                                                                                                                                                                                                     Written 24.9% of 133458 rows in 2 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=39%. Finished in 6 secs.                                                                                                                                           Written 33.3% of 100634 rows in 2 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=36%. Finished in 3 secs.                                                                                                                                           Written 19.7% of 170345 rows in 2 secs using 6 threads. anyBufferGrown=no; maxBuffUsed=43%. Finished in 8 secs.      Written 31.0% of 108311 rows in 2 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=39%. Finished in 4 secs.                                                                                                                                           Written 46.6% of 72614 rows in 2 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=39%. Finished in 2 secs.                                                                                                                                           Written 21.0% of 159466 rows in 2 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=42%. Finished in 7 secs.                                                                                                                                           Written 13.9% of 245188 rows in 2 secs using 8 threads. anyBufferGrown=no; maxBuffUsed=21%. Finished in 12 secs.      Written 25.9% of 128406 rows in 2 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=44%. Finished in 5 secs.      Written 41.2% of 80726 rows in 3 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=38%. Finished in 4 secs.                                                                                                                                                                                                                                                                                Written 16.4% of 202970 rows in 3 secs using 7 threads. anyBufferGrown=no; maxBuffUsed=36%. Finished in 15 secs.      Written 50.8% of 65992 rows in 3 secs using 2 threads. anyBufferGrown=no; maxBuffUsed=39%. Finished in 2 secs.                                                                                                                                                                                                                                                                                Written 30.0% of 111075 rows in 3 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=44%. Finished in 7 secs.                                                                                                                                           Written 30.6% of 109552 rows in 3 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=34%. Finished in 6 secs.      Written 25.8% of 131341 rows in 3 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=29%. Finished in 8 secs.      Written 16.2% of 205482 rows in 3 secs using 7 threads. anyBufferGrown=no; maxBuffUsed=45%. Finished in 15 secs.                                                                                                                                           Written 45.5% of 73667 rows in 3 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=36%. Finished in 3 secs.                                                                                                                                           Written 25.2% of 133281 rows in 3 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=44%. Finished in 8 secs.                                                                                                                                           Written 32.3% of 103168 rows in 3 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 6 secs.                                                                                                                                                                                                                                                                                Written 48.0% of 69953 rows in 3 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 3 secs.                                                                                                                                                                                                                                                                                Written 21.2% of 159197 rows in 3 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 11 secs.      Written 49.4% of 67887 rows in 3 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=38%. Finished in 3 secs.                                                                                                                                                                                                                                                                                                                                                                                                                     Written 26.6% of 127114 rows in 3 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=38%. Finished in 8 secs.                                                                                                                                           Written 39.9% of 84148 rows in 3 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 4 secs.      Written 23.8% of 139799 rows in 3 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=42%. Finished in 9 secs.                                                                                                                                                                                                                                                                                Written 49.0% of 68408 rows in 3 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=39%. Finished in 3 secs.      Written 24.1% of 139248 rows in 3 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=41%. Finished in 9 secs.                                                                                                                                                                                                                                                                                Written 58.7% of 57619 rows in 3 secs using 2 threads. anyBufferGrown=no; maxBuffUsed=28%. Finished in 2 secs.                                                                                                                                           Written 32.4% of 103450 rows in 3 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=36%. Finished in 6 secs.                                                                                                                                                                                                                                                                                Written 18.3% of 181893 rows in 3 secs using 6 threads. anyBufferGrown=no; maxBuffUsed=45%. Finished in 13 secs.      Written 55.7% of 59807 rows in 3 secs using 2 threads. anyBufferGrown=no; maxBuffUsed=34%. Finished in 2 secs.      Written 30.4% of 109645 rows in 3 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=33%. Finished in 6 secs.                                                                                                                                           Written 53.9% of 62232 rows in 3 secs using 2 threads. anyBufferGrown=no; maxBuffUsed=39%. Finished in 2 secs.                                                                                                                                                                                                                                                                                                                                                                                                                     Written 57.0% of 58387 rows in 3 secs using 2 threads. anyBufferGrown=no; maxBuffUsed=36%. Finished in 2 secs.                                                                                                                                           Written 46.0% of 72405 rows in 3 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 3 secs.      Written 52.4% of 63983 rows in 3 secs using 2 threads. anyBufferGrown=no; maxBuffUsed=36%. Finished in 2 secs.                                                                                                                                           Written 24.4% of 137276 rows in 3 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=37%. Finished in 9 secs.                                                                                                                                                                                                                                                                                Written 30.5% of 109095 rows in 3 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=42%. Finished in 6 secs.      Written 40.0% of 83889 rows in 3 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=39%. Finished in 4 secs.                                                                                                                                                                                                                                                                                Written 18.2% of 183993 rows in 3 secs using 6 threads. anyBufferGrown=no; maxBuffUsed=29%. Finished in 13 secs.      Written 22.8% of 147260 rows in 3 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=43%. Finished in 10 secs.      Written 37.0% of 90667 rows in 3 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 5 secs.                                                                                                                                                                                                                                                                                Written 47.1% of 71789 rows in 3 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=38%. Finished in 3 secs.                                                                                                                                           Written 33.2% of 101019 rows in 3 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=26%. Finished in 6 secs.      Written 22.4% of 148337 rows in 3 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 10 secs.                                                                                                                                           Written 45.3% of 74149 rows in 3 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=31%. Finished in 3 secs.      Written 18.9% of 176302 rows in 3 secs using 6 threads. anyBufferGrown=no; maxBuffUsed=39%. Finished in 12 secs.                                                                                                                                           Written 34.2% of 97978 rows in 3 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=38%. Finished in 5 secs.                                                                                                                                           Written 56.0% of 59958 rows in 3 secs using 2 threads. anyBufferGrown=no; maxBuffUsed=34%. Finished in 2 secs.                                                                                                                                                                                                                                                                                                                                                                                                                     Written 22.6% of 148371 rows in 3 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=42%. Finished in 10 secs.      Written 30.3% of 109759 rows in 3 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=45%. Finished in 6 secs.                                                                                                                                           Written 21.2% of 156950 rows in 3 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=42%. Finished in 11 secs.                                                                                                                                                                                                                                                                                Written 19.7% of 170536 rows in 3 secs using 6 threads. anyBufferGrown=no; maxBuffUsed=42%. Finished in 12 secs.      Written 38.3% of 87584 rows in 3 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=38%. Finished in 4 secs.                                                                                                                                           Written 23.3% of 145327 rows in 3 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 9 secs.      Written 49.1% of 68927 rows in 3 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=38%. Finished in 3 secs.                                                                                                                                           Written 19.8% of 168267 rows in 3 secs using 6 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 12 secs.                                                                                                                                                                                                                                                                                                                                                                                                                     Written 28.1% of 119474 rows in 3 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=25%. Finished in 7 secs.      Written 27.9% of 119464 rows in 4 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 10 secs.      Written 25.5% of 130353 rows in 4 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=39%. Finished in 11 secs.      Written 19.8% of 169094 rows in 3 secs using 6 threads. anyBufferGrown=no; maxBuffUsed=44%. Finished in 12 secs.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Written 48.2% of 70232 rows in 3 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=36%. Finished in 3 secs.      Written 30.3% of 109998 rows in 4 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 9 secs.                                                                                                                                                                                                                                                                                Written 13.0% of 260335 rows in 3 secs using 8 threads. anyBufferGrown=no; maxBuffUsed=27%. Finished in 20 secs.      Written 18.4% of 181262 rows in 3 secs using 6 threads. anyBufferGrown=no; maxBuffUsed=45%. Finished in 13 secs.      Written 21.3% of 156083 rows in 3 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=41%. Finished in 11 secs.      Written 61.3% of 54738 rows in 4 secs using 2 threads. anyBufferGrown=no; maxBuffUsed=37%. Finished in 2 secs.                                                                                                                                                                                                                                                                                Written 48.9% of 68608 rows in 4 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 4 secs.                                                                                                                                           Written 47.6% of 70518 rows in 4 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=39%. Finished in 4 secs.      Written 64.8% of 51786 rows in 4 secs using 2 threads. anyBufferGrown=no; maxBuffUsed=37%. Finished in 2 secs.                                                                                                                                                                                                                                                                                                                                                                                                                     Written 12.2% of 278211 rows in 4 secs using 9 threads. anyBufferGrown=no; maxBuffUsed=47%. Finished in 28 secs.      Written 25.2% of 132299 rows in 4 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 11 secs.      Written 39.4% of 85111 rows in 4 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=41%. Finished in 6 secs.                                                                                                                                           Written 19.4% of 172767 rows in 4 secs using 6 threads. anyBufferGrown=no; maxBuffUsed=24%. Finished in 16 secs.      Written 23.3% of 142678 rows in 4 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=46%. Finished in 13 secs.                                                                                                                                           Written 26.3% of 126711 rows in 4 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=39%. Finished in 11 secs.                                                                                                                                           Written 26.4% of 127113 rows in 4 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=41%. Finished in 11 secs.                                                                                                                                                                                                                                                                                                                                                                                                                     Written 24.1% of 137989 rows in 4 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=43%. Finished in 12 secs.                                                                                                                                                                                                                                                                                                                                                                                                                     Written 65.9% of 50511 rows in 4 secs using 2 threads. anyBufferGrown=no; maxBuffUsed=36%. Finished in 2 secs.                                                                                                                                           Written 61.7% of 54409 rows in 4 secs using 2 threads. anyBufferGrown=no; maxBuffUsed=36%. Finished in 2 secs.      Written 21.8% of 153945 rows in 4 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=42%. Finished in 14 secs.                                                                                                                                           Written 44.6% of 75162 rows in 4 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 4 secs.      Written 37.3% of 90050 rows in 4 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=36%. Finished in 6 secs.                                                                                                                                                                                                                                                                                                                                                                                                                     Written 55.7% of 59719 rows in 4 secs using 2 threads. anyBufferGrown=no; maxBuffUsed=37%. Finished in 3 secs.                                                                                                                                           Written 19.4% of 173291 rows in 4 secs using 6 threads. anyBufferGrown=no; maxBuffUsed=43%. Finished in 16 secs.      Written 29.0% of 116643 rows in 4 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=38%. Finished in 9 secs.      Written 28.6% of 116389 rows in 4 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=41%. Finished in 9 secs.      Written 25.4% of 131162 rows in 4 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=42%. Finished in 11 secs.      Written 37.7% of 88385 rows in 4 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=42%. Finished in 6 secs.      Written 25.0% of 133010 rows in 4 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=43%. Finished in 11 secs.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Written 18.3% of 181764 rows in 4 secs using 6 threads. anyBufferGrown=no; maxBuffUsed=43%. Finished in 17 secs.      Written 12.7% of 264445 rows in 4 secs using 8 threads. anyBufferGrown=no; maxBuffUsed=43%. Finished in 27 secs.                                                                                                                                           Written 21.2% of 159537 rows in 4 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=44%. Finished in 14 secs.                                                                                                                                           Written 22.2% of 151376 rows in 4 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=35%. Finished in 14 secs.                                                                                                                                                                                                                                                                                Written 19.6% of 171018 rows in 4 secs using 6 threads. anyBufferGrown=no; maxBuffUsed=41%. Finished in 16 secs.                                                                                                                                           Written 21.2% of 156763 rows in 4 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=46%. Finished in 14 secs.                                                                                                                                           Written 14.0% of 239994 rows in 4 secs using 8 threads. anyBufferGrown=no; maxBuffUsed=30%. Finished in 24 secs.      Written 11.3% of 300014 rows in 4 secs using 9 threads. anyBufferGrown=no; maxBuffUsed=35%. Finished in 31 secs.                                                                                                                                                                                                                                                                                Written 14.8% of 224954 rows in 4 secs using 7 threads. anyBufferGrown=no; maxBuffUsed=47%. Finished in 23 secs.                                                                                                                                           Written 15.5% of 217811 rows in 4 secs using 7 threads. anyBufferGrown=no; maxBuffUsed=44%. Finished in 21 secs.      Written 39.0% of 86041 rows in 4 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=39%. Finished in 6 secs.      Written 8.3% of 407732 rows in 4 secs using 13 threads. anyBufferGrown=no; maxBuffUsed=33%. Finished in 44 secs.      Written 23.6% of 142409 rows in 4 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=39%. Finished in 12 secs.                                                                                                                                           Written 13.7% of 291115 rows in 4 secs using 8 threads. anyBufferGrown=no; maxBuffUsed=27%. Finished in 25 secs.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Written 11.6% of 291887 rows in 5 secs using 9 threads. anyBufferGrown=no; maxBuffUsed=34%. Finished in 38 secs.      Written 54.4% of 62151 rows in 5 secs using 2 threads. anyBufferGrown=no; maxBuffUsed=37%. Finished in 4 secs.                                                                                                                                           Written 7.2% of 546400 rows in 5 secs using 14 threads. anyBufferGrown=no; maxBuffUsed=26%. Finished in 64 secs.      Written 62.4% of 53352 rows in 5 secs using 2 threads. anyBufferGrown=no; maxBuffUsed=33%. Finished in 3 secs.                                                                                                                                                                                                                                                                                Written 21.5% of 157132 rows in 5 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=37%. Finished in 18 secs.      Written 44.2% of 76590 rows in 5 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=38%. Finished in 6 secs.      Written 28.6% of 116245 rows in 5 secs using 4 threads. anyBufferGrown=no; maxBuffUsed=29%. Finished in 12 secs.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Written 9.1% of 370934 rows in 5 secs using 11 threads. anyBufferGrown=no; maxBuffUsed=36%. Finished in 49 secs.      Written 9.6% of 353054 rows in 5 secs using 11 threads. anyBufferGrown=no; maxBuffUsed=32%. Finished in 47 secs.                                                                                                                                                                                                                                                                                Written 8.2% of 407326 rows in 5 secs using 13 threads. anyBufferGrown=no; maxBuffUsed=48%. Finished in 56 secs.      Written 12.2% of 271859 rows in 5 secs using 9 threads. anyBufferGrown=no; maxBuffUsed=48%. Finished in 35 secs.                                                                                                                                                                                                                                                                                Written 24.4% of 138844 rows in 5 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 15 secs.                                                                                                                                           Written 23.1% of 146564 rows in 5 secs using 5 threads. anyBufferGrown=no; maxBuffUsed=40%. Finished in 16 secs.                                                                                                                                           Written 17.8% of 187375 rows in 6 secs using 6 threads. anyBufferGrown=no; maxBuffUsed=44%. Finished in 27 secs.                                                                                                                                           Written 7.5% of 452540 rows in 5 secs using 14 threads. anyBufferGrown=no; maxBuffUsed=34%. Finished in 61 secs.      Written 14.1% of 239502 rows in 6 secs using 8 threads. anyBufferGrown=no; maxBuffUsed=46%. Finished in 36 secs.                                                                                                                                                                                                                                                                                                                                                                                                                     Written 48.1% of 69784 rows in 6 secs using 3 threads. anyBufferGrown=no; maxBuffUsed=39%. Finished in 6 secs.                                                                                                                                           Written 19.3% of 174205 rows in 6 secs using 6 threads. anyBufferGrown=no; maxBuffUsed=37%. Finished in 25 secs.                                                                                                                                           Written 56.3% of 59087 rows in 34 secs using 2 threads. anyBufferGrown=no; maxBuffUsed=32%. Finished in 26 secs.                                                                                                                                           [NID 02599] 2018-04-03 09:53:26 Apid 17148183: initiated application termination
+Application 17148183 network quiesced: 3 nodes quiesced, 00:04:26 node-seconds
+Application 17148183 resources: utime ~17487s, stime ~67s, Rss ~828208, inblocks ~1598846, outblocks ~167009
+END 1522763613
