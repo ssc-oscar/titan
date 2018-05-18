@@ -8,7 +8,7 @@ suppressMessages(library('RecordLinkage', lib.loc="./R/x86_64-pc-linux-gnu-libra
 init()
 #Rprof(append = TRUE)
 
-x = comm.fread ("auth1", pattern="*",quote="",sep=",")
+x = comm.fread ("auth1", pattern="*",quote="",sep=";")
 names(x) = c("un","n","fn","ln","e","a");
 x =  x[,c("n", "e", "ln", "fn", "un", "fn","a")];
 x1 = x[,c("n", "e", "ln", "fn", "un", "ln","a")];
