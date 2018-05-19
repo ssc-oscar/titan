@@ -104,4 +104,4 @@ fwrite(data.frame(lbl),file=fnamel, sep=";",quote=FALSE);
 fnamev=paste("outCV",myrank,sep=".");
 fwrite(data.frame(val),file=fnamev, sep=";",quote=FALSE);
 barrier();
-finalize();
+#finalize();

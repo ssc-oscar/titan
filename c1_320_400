@@ -3,7 +3,7 @@ R version 5.2.82
 Parallel Batch Use (see r-pbd.org) via mpirun Rscript.
 Example: aprun -n 2 Rscript myscript.r
 OMP_NUM_THREADS set to 1. Change as needed to use Cray SciLib.
-START 1526691066
+START 1526696495
 [1] 1
 [1] 2
 [1] 3
@@ -25,12 +25,11 @@ START 1526691066
 [1] 19
 [1] 20
 [1] 21
-[1] 22
 [1] 33
 [1] 34
 [1] 35
 [1] 36
-[1] 37
+[1] 22
 [1] 23
 [1] 24
 [1] 25
@@ -41,7 +40,14 @@ START 1526691066
 [1] 30
 [1] 31
 [1] 32
+[1] 37
 [1] 38
+[1] 49
+[1] 50
+[1] 51
+[1] 52
+[1] 53
+[1] 54
 [1] 39
 [1] 40
 [1] 41
@@ -52,18 +58,16 @@ START 1526691066
 [1] 46
 [1] 47
 [1] 48
-[1] 49
-[1] 50
-[1] 51
-[1] 52
-[1] 53
-[1] 54
-[1][1] 65
+[1] 65
 [1] 66
 [1] 67
 [1] 68
 [1] 69
 [1] 70
+[1] 71
+[1] 72
+[1] 81
+[1] 82
 [1] 55
 [1] 56
 [1] 57
@@ -74,15 +78,10 @@ START 1526691066
 [1] 62
 [1] 63
 [1] 64
-[1] 81
-[1] 82
 [1] 83
 [1] 84
 [1] 85
 [1] 86
-[1] 87
- 71
-[1] 72
 [1] 73
 [1] 74
 [1] 75
@@ -96,6 +95,7 @@ START 1526691066
 [1] 99
 [1] 100
 [1] 101
+[1] 87
 [1] 88
 [1] 89
 [1] 90
@@ -106,12 +106,8 @@ START 1526691066
 [1] 95
 [1] 96
 [1] 102
-[1] 113
-[1] 114
-[1] 115
-[1] 116
-[1] 117
 [1] 103
+[1] 113
 [1] 104
 [1] 105
 [1] 106
@@ -126,6 +122,47 @@ START 1526691066
 [1] 131
 [1] 132
 [1] 133
+[1] 145
+[1] 146
+[1] 147
+[1] 148
+[1] 149
+[1] 150
+[1][1] 134
+[1] 135
+[1] 136
+[1] 137
+[1] 138
+[1] 139
+[1] 140
+[1] 141
+[1] 142
+[1] 143
+[1] 144
+[1] 161
+[1] 162
+[1] 163
+[1] 164
+[1] 151
+[1] 152
+[1] 153
+[1] 154
+[1] 155
+[1] 156
+[1] 157
+[1] 158
+[1] 159
+[1] 160
+[1] 177
+[1] 178
+[1] 179
+[1] 180
+[1] 181
+[1] 182
+[1] 114
+[1] 115
+[1] 116
+[1] 117
 [1] 118
 [1] 119
 [1] 120
@@ -137,38 +174,9 @@ START 1526691066
 [1] 126
 [1] 127
 [1] 128
-[1] 145
-[1] 134
-[1] 135
-[1] 136
-[1] 137
-[1] 138
-[1] 139
-[1] 140
-[1] 141
-[1] 142
-[1] 143
-[1] 144
-[1] 146
-[1] 147
-[1] 148
-[1] 149
-[1] 150
-[1][1] 161
-[1] 162
-[1] 163
- 151
-[1] 152
-[1] 153
-[1] 154
-[1] 155
-[1] 156
-[1] 157
-[1] 158
-[1] 159
-[1] 160
-[1] 164
-[1] 165
+[1] 183
+[1] 184
+ 165
 [1] 166
 [1] 167
 [1] 168
@@ -180,26 +188,21 @@ START 1526691066
 [1] 174
 [1] 175
 [1] 176
-[1] 177
-[1] 178
-[1] 179
-[1] 180
-[1] 181
-[1] 182
-[1] 193
+[1] 185
+[1] 186
+[1][1] 193
 [1] 194
-[1] 195
+ 187
+[1] 188
+[1][1] 195
 [1] 196
 [1] 197
 [1] 198
 [1] 199
-[1] 183
-[1] 184
-[1] 185
-[1] 186
-[1] 187
-[1] 188
-[1] 189
+[1] 200
+[1] 201
+[1] 202
+ 189
 [1] 190
 [1] 191
 [1] 192
@@ -209,9 +212,6 @@ START 1526691066
 [1] 212
 [1] 213
 [1] 214
-[1] 200
-[1] 201
-[1] 202
 [1] 203
 [1] 204
 [1] 205
@@ -220,6 +220,9 @@ START 1526691066
 [1] 208
 [1] 225
 [1] 226
+[1] 227
+[1] 228
+[1] 229
 [1] 215
 [1] 216
 [1] 217
@@ -230,14 +233,11 @@ START 1526691066
 [1] 222
 [1] 223
 [1] 224
-[1] 227
-[1] 228
-[1][1] 241
+[1] 241
 [1] 242
 [1] 243
 [1] 244
 [1] 245
- 229
 [1] 230
 [1] 231
 [1] 232
@@ -255,6 +255,8 @@ START 1526691066
 [1] 260
 [1] 261
 [1] 262
+[1] 263
+[1] 264
 [1] 246
 [1] 247
 [1] 248
@@ -266,8 +268,15 @@ START 1526691066
 [1] 254
 [1] 255
 [1] 256
-[1] 263
-[1] 264
+[1] 273
+[1] 274
+[1] 275
+[1] 276
+[1] 277
+[1] 278
+[1] 279
+[1] 280
+[1] 281
 [1] 265
 [1] 266
 [1] 267
@@ -276,21 +285,6 @@ START 1526691066
 [1] 270
 [1] 271
 [1] 272
-[1] 273
-[1] 274
-[1] 275
-[1] 276
-[1] 277
-[1] 278
-[1] 279
-[1] 289
-[1] 290
-[1] 291
-[1] 292
-[1] 293
-[1] 294
-[1] 280
-[1] 281
 [1] 282
 [1] 283
 [1] 284
@@ -298,8 +292,20 @@ START 1526691066
 [1] 286
 [1] 287
 [1] 288
-[1][1] 295
+[1] 289
+[1] 290
+[1] 291
+[1] 292
+[1] 293
+[1] 294
+[1] 295
 [1] 296
+[1] 305
+[1] 306
+[1] 307
+[1] 308
+[1] 309
+[1] 310
 [1] 297
 [1] 298
 [1] 299
@@ -308,12 +314,6 @@ START 1526691066
 [1] 302
 [1] 303
 [1] 304
- 305
-[1] 306
-[1] 307
-[1] 308
-[1] 309
-[1] 310
 [1] 311
 [1] 312
 [1] 313
@@ -487,8 +487,464 @@ There were 50 or more warnings (use warnings() to see the first 50)
 [1] 2209 2209    8
 [1] "about to rcv  0 242"
 [1] 1204 1204    8
-[NID 03329] 2018-05-18 21:24:34 Apid 17410279: initiated application termination
-[NID 03329] 2018-05-18 21:24:35 Apid 17410279: OOM killer terminated this process.
-Application 17410279 exit signals: Killed
-Application 17410279 resources: utime ~140s, stime ~76s, Rss ~34584, inblocks ~2827280, outblocks ~700
-END 1526693077
+[1] "about to rcv  0 241"
+[1] 458 458   8
+[1] "about to rcv  0 240"
+[1] 535 535   8
+[1] "about to rcv  0 239"
+[1] 2241 2241    8
+[1] "about to rcv  0 238"
+[1] 1307 1307    8
+[1] "about to rcv  0 237"
+[1] 346 346   8
+[1] "about to rcv  0 236"
+[1] 645 645   8
+[1] "about to rcv  0 235"
+[1] 337 337   8
+[1] "about to rcv  0 234"
+[1] 1176 1176    8
+[1] "about to rcv  0 233"
+[1] 246 246   8
+[1] "about to rcv  0 232"
+[1] 1654 1654    8
+[1] "about to rcv  0 231"
+[1] 1312 1312    8
+[1] "about to rcv  0 230"
+[1] 703 703   8
+[1] "about to rcv  0 229"
+[1] 563 563   8
+[1] "about to rcv  0 228"
+[1] 1983 1983    8
+[1] "about to rcv  0 227"
+[1] 2172 2172    8
+[1] "about to rcv  0 226"
+[1] 202 202   8
+[1] "about to rcv  0 225"
+[1] 1496 1496    8
+[1] "about to rcv  0 224"
+[1] 947 947   8
+[1] "about to rcv  0 223"
+[1] 1318 1318    8
+[1] "about to rcv  0 222"
+[1] 618 618   8
+[1] "about to rcv  0 221"
+[1] 424 424   8
+[1] "about to rcv  0 220"
+[1] 605 605   8
+[1] "about to rcv  0 219"
+[1] 275 275   8
+[1] "about to rcv  0 218"
+[1] 386 386   8
+[1] "about to rcv  0 217"
+[1] 596 596   8
+[1] "about to rcv  0 216"
+[1] 480 480   8
+[1] "about to rcv  0 215"
+[1] 1575 1575    8
+[1] "about to rcv  0 214"
+[1] 566 566   8
+[1] "about to rcv  0 213"
+[1] 505 505   8
+[1] "about to rcv  0 212"
+[1] 1807 1807    8
+[1] "about to rcv  0 211"
+[1] 579 579   8
+[1] "about to rcv  0 210"
+[1] 518 518   8
+[1] "about to rcv  0 209"
+[1] 392 392   8
+[1] "about to rcv  0 208"
+[1] 332 332   8
+[1] "about to rcv  0 207"
+[1] 601 601   8
+[1] "about to rcv  0 206"
+[1] 469 469   8
+[1] "about to rcv  0 205"
+[1] 1158 1158    8
+[1] "about to rcv  0 204"
+[1] 1876 1876    8
+[1] "about to rcv  0 203"
+[1] 1132 1132    8
+[1] "about to rcv  0 202"
+[1] 584 584   8
+[1] "about to rcv  0 201"
+[1] 2016 2016    8
+[1] "about to rcv  0 200"
+[1] 772 772   8
+[1] "about to rcv  0 199"
+[1] 488 488   8
+[1] "about to rcv  0 198"
+[1] 525 525   8
+[1] "about to rcv  0 197"
+[1] 1148 1148    8
+[1] "about to rcv  0 196"
+[1] 1657 1657    8
+[1] "about to rcv  0 195"
+[1] 1125 1125    8
+[1] "about to rcv  0 194"
+[1] 642 642   8
+[1] "about to rcv  0 193"
+[1] 353 353   8
+[1] "about to rcv  0 192"
+[1] 616 616   8
+[1] "about to rcv  0 191"
+[1] 1714 1714    8
+[1] "about to rcv  0 190"
+[1] 1125 1125    8
+[1] "about to rcv  0 189"
+[1] 338 338   8
+[1] "about to rcv  0 188"
+[1] 432 432   8
+[1] "about to rcv  0 187"
+[1] 1260 1260    8
+[1] "about to rcv  0 186"
+[1] 1812 1812    8
+[1] "about to rcv  0 185"
+[1] 772 772   8
+[1] "about to rcv  0 184"
+[1] 524 524   8
+[1] "about to rcv  0 183"
+[1] 937 937   8
+[1] "about to rcv  0 182"
+[1] 191 191   8
+[1] "about to rcv  0 181"
+[1] 385 385   8
+[1] "about to rcv  0 180"
+[1] 1158 1158    8
+[1] "about to rcv  0 179"
+[1] 1943 1943    8
+[1] "about to rcv  0 178"
+[1] 686 686   8
+[1] "about to rcv  0 177"
+[1] 412 412   8
+[1] "about to rcv  0 176"
+[1] 1155 1155    8
+[1] "about to rcv  0 175"
+[1] 518 518   8
+[1] "about to rcv  0 174"
+[1] 1018 1018    8
+[1] "about to rcv  0 173"
+[1] 359 359   8
+[1] "about to rcv  0 172"
+[1] 1062 1062    8
+[1] "about to rcv  0 171"
+[1] 761 761   8
+[1] "about to rcv  0 170"
+[1] 1575 1575    8
+[1] "about to rcv  0 169"
+[1] 1317 1317    8
+[1] "about to rcv  0 168"
+[1] 1919 1919    8
+[1] "about to rcv  0 167"
+[1] 318 318   8
+[1] "about to rcv  0 166"
+[1] 1617 1617    8
+[1] "about to rcv  0 165"
+[1] 605 605   8
+[1] "about to rcv  0 164"
+[1] 1948 1948    8
+[1] "about to rcv  0 163"
+[1] 394 394   8
+[1] "about to rcv  0 162"
+[1] 1614 1614    8
+[1] "about to rcv  0 161"
+[1] 374 374   8
+[1] "about to rcv  0 160"
+[1] 1496 1496    8
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)There were 50 or more warnings (use warnings() to see the first 50)
+
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)There were 50 or more warnings (use warnings() to see the first 50)
+
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)There were 50 or more warnings (use warnings() to see the first 50)
+
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)There were 50 or more warnings (use warnings() to see the first 50)
+
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+Warning messages:
+1: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+2: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+3: In FUN(newX[, i], ...) :
+ There were 50 or more warnings (use warnings() to see the first 50) no non-missing arguments to max; returning -Inf
+
+4: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+5: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+6: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+7: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+8: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+9: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+10: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)There were 50 or more warnings (use warnings() to see the first 50)
+
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)There were 50 or more warnings (use warnings() to see the first 50)
+
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] "Finished computing"
+[NID 06226] 2018-05-18 23:04:23 Apid 17410491: initiated application termination
+Application 17410491 exit signals: Killed
+Application 17410491 resources: utime ~5251s, stime ~92s, Rss ~723140, inblocks ~2868347, outblocks ~286568
+END 1526699068

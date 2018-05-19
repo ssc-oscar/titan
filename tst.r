@@ -35,6 +35,7 @@ MM=apply(pairs$pairs[,c("n", "e", "ln", "fn", "un", "ifn")],1,max, na.rm = T)>.8
 val = c();
 ll = sum(MM);
 myrank=comm.rank();
+fnamev=paste("outV",myrank,sep=".");
 if (ll > 0){
   p = pairs$pairs[MM,-7];
   comm.print(c(ll,dim(p)))
@@ -42,6 +43,8 @@ if (ll > 0){
   a = rep(myrank,ll);
   b = a;
   val = cbind(a, b, p);
+  fwrite(data.frame(val),file=fnamev, sep=";",quote=FALSE);
+  rm(val)
 }
 
 message.pass <- function(off=1) {
@@ -74,16 +77,18 @@ for (i in 1:nc){
      a = rep(myrank,ll);
      b = rep(orank, ll);
      val0 = cbind (a, b, p);
-     val = rbind(val, val0);
+     #val = rbind(val, val0);
+     fwrite(data.frame(val0),file=fnamev, sep=";",quote=FALSE,append=T);
   }
 }
 
 #comm.print(lbl[1:10,], all.rank=TRUE)
 barrier();
+comm.print("Finished computing");
 myrank=comm.rank();
-#fnamel=paste("outL",myrank,sep=".");
-#fwrite(data.frame(lbl),file=fnamel, sep=";",quote=FALSE);
-fnamev=paste("outV",myrank,sep=".");
-fwrite(data.frame(val),file=fnamev, sep=";",quote=FALSE);
+##fnamel=paste("outL",myrank,sep=".");
+##fwrite(data.frame(lbl),file=fnamel, sep=";",quote=FALSE);
+#fnamev=paste("outV",myrank,sep=".");
+#fwrite(data.frame(val),file=fnamev, sep=";",quote=FALSE);
 barrier();
 #finalize();
