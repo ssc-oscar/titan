@@ -17,6 +17,8 @@ names(x1)=c("n", "e", "ln", "fn", "un", "ifn","a")
 #dx = dim(x);
 #comm.print(dx, all.rank=TRUE)
 
+barrier()
+comm.print("read all");
 
 #xf <- do.call('rbind',allgather(x))
 #dxf = dim(xf);
@@ -26,6 +28,8 @@ names(x1)=c("n", "e", "ln", "fn", "un", "ifn","a")
 #
 
 pairs = compare.linkage (x, x1, exclude=c(7),strcmp=c(1:6),strcmpfun = jarowinkler);
+barrier()
+comm.print("Computed pairs");
 #predict and write out matches
 MM=apply(pairs$pairs[,c("n", "e", "ln", "fn", "un", "ifn")],1,max, na.rm = T)>.8&pairs$pairs$id1 != pairs$pairs$id2;
 val = c();

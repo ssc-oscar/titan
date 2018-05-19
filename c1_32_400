@@ -1,0 +1,111 @@
+Swapping PrgEnv-pgi for PrgEnv-gnu
+R version 5.2.82
+Parallel Batch Use (see r-pbd.org) via mpirun Rscript.
+Example: aprun -n 2 Rscript myscript.r
+OMP_NUM_THREADS set to 1. Change as needed to use Cray SciLib.
+START 1526679787
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+[1] 10
+[1] 11
+[1] 12
+[1] 13
+[1] 14
+[1] 15
+[1] 16
+[1] 17
+[1] 18
+[1] 19
+[1] 20
+[1] 21
+[1] 22
+[1] 23
+[1] 24
+[1] 25
+[1] 26
+[1] 27
+[1] 28
+[1] 29
+[1] 30
+[1] 31
+[1] 32
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] 1366 1366    8
+[1] "about to rcv  0 31"
+[1] 823 823   8
+[1] "about to rcv  0 30"
+[1] 861 861   8
+[1] "about to rcv  0 29"
+[1] 877 877   8
+[1] "about to rcv  0 28"
+[1] 506 506   8
+[1] "about to rcv  0 27"
+[1] 169 169   8
+[1] "about to rcv  0 26"
+[1] 299 299   8
+[1] "about to rcv  0 25"
+[1] 399 399   8
+[1] "about to rcv  0 24"
+[1] 781 781   8
+[1] "about to rcv  0 23"
+[1] 584 584   8
+[1] "about to rcv  0 22"
+[1] 191 191   8
+[1] "about to rcv  0 21"
+[1] 763 763   8
+[1] "about to rcv  0 20"
+[1] 342 342   8
+[1] "about to rcv  0 19"
+[1] 361 361   8
+[1] "about to rcv  0 18"
+[1] 508 508   8
+[1] "about to rcv  0 17"
+[1] 99 99  8
+[1] "about to rcv  0 16"
+[1] 466 466   8
+There were 50 or more warnings (use warnings() to see the first 50)There were 50 or more warnings (use warnings() to see the first 50)
+
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)There were 50 or more warnings (use warnings() to see the first 50)
+
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+Written 7.9% of 509711 rows in 2 secs using 13 threads. anyBufferGrown=no; maxBuffUsed=30%. Finished in 23 secs.                                                                                                                                           Written 5.9% of 667945 rows in 3 secs using 17 threads. anyBufferGrown=no; maxBuffUsed=36%. Finished in 47 secs.      Written 6.0% of 668970 rows in 3 secs using 17 threads. anyBufferGrown=no; maxBuffUsed=36%. Finished in 46 secs.      Written 5.9% of 669372 rows in 3 secs using 17 threads. anyBufferGrown=no; maxBuffUsed=36%. Finished in 47 secs.                                                                                                                                                                                                                                                                                                                                                                                                                     Written 5.0% of 806261 rows in 4 secs using 20 threads. anyBufferGrown=no; maxBuffUsed=35%. Finished in 75 secs.      Written 4.8% of 825107 rows in 4 secs using 21 threads. anyBufferGrown=no; maxBuffUsed=35%. Finished in 79 secs.                                                                                                                                                                                                                                                                                Written 4.2% of 966100 rows in 5 secs using 24 threads. anyBufferGrown=no; maxBuffUsed=36%. Finished in 114 secs.                                                                                                                                           [NID 00333] 2018-05-18 17:47:55 Apid 17409533: initiated application termination
+Application 17409533 exit signals: Killed
+Application 17409533 resources: utime ~289s, stime ~10s, Rss ~575896, inblocks ~301289, outblocks ~3153
+END 1526680077
