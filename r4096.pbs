@@ -3,7 +3,7 @@
 #PBS -A csc229
 #PBS -N testpbdR_out
 #PBS -j oe
-#PBS -l walltime=02:00:00,nodes=256
+#PBS -l walltime=06:00:00,nodes=256
 #PBS -l gres=atlas1%atlas2
 module load r/3.3.2x
 cd $MEMBERWORK/csc229/id
