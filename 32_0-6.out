@@ -1,0 +1,104 @@
+Swapping PrgEnv-pgi for PrgEnv-gnu
+R version 5.2.82
+Parallel Batch Use (see r-pbd.org) via mpirun Rscript.
+Example: aprun -n 2 Rscript myscript.r
+OMP_NUM_THREADS set to 1. Change as needed to use Cray SciLib.
+START 1527464918
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+[1] 10
+[1] 11
+[1] 12
+[1] 13
+[1] 14
+[1] 15
+[1] 16
+[1] 17
+[1] 18
+[1] 19
+[1] 20
+[1] 21
+[1] 22
+[1] 23
+[1] 24
+[1] 25
+[1] 26
+[1] 27
+[1] 28
+[1] 29
+[1] 30
+[1] 31
+[1] 32
+[1] "read all"
+[1] "Computed self pairs"
+[1] 1492 1492    8
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+Warning messages:
+1: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+2: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+3: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+4: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+5: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+6: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+[1] "about to rcv  0 31"
+[1] 462 462   8
+[1] "about to rcv  0 30"
+[1] 572 572   8
+[1] "about to rcv  0 29"
+[1] 914 914   8
+[1] "about to rcv  0 28"
+[1] 800 800   8
+[1] "about to rcv  0 27"
+[1] 621 621   8
+[1] "about to rcv  0 26"
+[1] 372 372   8
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+Warning messages:
+1: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+2: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+3: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+4: In FUN(newX[, i], ...) :
+  no non-missing arguments to max; returning -Inf
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] "Finished computing"
+[NID 06988] 2018-05-27 19:50:38 Apid 17463666: initiated application termination
+Application 17463666 exit signals: Killed
+Application 17463666 resources: utime ~126s, stime ~12s, Rss ~643244, inblocks ~301169, outblocks ~2053
+END 1527465040
