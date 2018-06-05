@@ -11,7 +11,7 @@ TO = 1024;
 init()
 #Rprof(append = TRUE)
 
-x = comm.fread ("auth1", pattern="*",quote="",sep=";")
+x = comm.fread ("auth1", pattern="*",quote="",sep=";",header=F)
 names(x) = c("un","n","fn","ln","e","a");
 x =  x[,c("n", "e", "ln", "fn", "un", "fn","a")];
 x1 = x[,c("n", "e", "ln", "fn", "un", "ln","a")];

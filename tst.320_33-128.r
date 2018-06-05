@@ -5,8 +5,8 @@ suppressMessages(library(pbdIO,quietly = TRUE))
 suppressMessages(library('data.table', quietly = TRUE))
 suppressMessages(library('RecordLinkage', lib.loc="./R/x86_64-pc-linux-gnu-library/3.3", quietly = TRUE))
 
-FR = 16;
-TO = 80;
+FR = 33;
+TO = 128;
 
 init()
 #Rprof(append = TRUE)
@@ -29,7 +29,7 @@ comm.print("read all");
 
 #tandem.webdev,Agence-Tandem,Agence-Tandem,Agence-Tandem,tandem.webdev@gmail.com,Agence-Tandem <tandem.webdev@gmail.com>
 myrank=comm.rank();
-fnamev=paste("4096_16-80/outV",myrank,sep=".");
+fnamev=paste("320_33-128/outV",myrank,sep=".");
 
 
 if (FR == 0){

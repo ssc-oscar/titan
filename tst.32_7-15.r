@@ -5,8 +5,8 @@ suppressMessages(library(pbdIO,quietly = TRUE))
 suppressMessages(library('data.table', quietly = TRUE))
 suppressMessages(library('RecordLinkage', lib.loc="./R/x86_64-pc-linux-gnu-library/3.3", quietly = TRUE))
 
-FR = 16;
-TO = 80;
+FR = 7;
+TO = 15;
 
 init()
 #Rprof(append = TRUE)
@@ -29,7 +29,7 @@ comm.print("read all");
 
 #tandem.webdev,Agence-Tandem,Agence-Tandem,Agence-Tandem,tandem.webdev@gmail.com,Agence-Tandem <tandem.webdev@gmail.com>
 myrank=comm.rank();
-fnamev=paste("4096_16-80/outV",myrank,sep=".");
+fnamev=paste("32_7-15/outV",myrank,sep=".");
 
 
 if (FR == 0){
@@ -41,7 +41,7 @@ if (FR == 0){
   val = c();
   ll = sum(MM);
   if (ll > 0){
-    p = pairs$pairs[MM,-9];
+    p = pairs$pairs[MM,];
     comm.print(c(ll,dim(p)))
     a = rep(myrank,ll);
     b = a;
@@ -77,7 +77,7 @@ for (i in max(1,FR):min(TO,nc)){
   pairs = compare.linkage (x, x1, exclude=c(7),strcmp=c(1:6),strcmpfun = jarowinkler);
   MM=apply(pairs$pairs[,c("n", "e", "ln", "fn", "un", "ifn")],1,max,na.rm = T)>.8;
   ll = sum(MM);
-  p = pairs$pairs[MM,-9];
+  p = pairs$pairs[MM,-7];
   comm.print(c(ll,dim(p)));
   if (ll > 0){
      orank = (myrank-i)%%ncom;
