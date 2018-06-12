@@ -10,6 +10,8 @@ TO = __TO__;
 
 init()
 #Rprof(append = TRUE)
+myrank=comm.rank();
+fnamev=paste("__OUT__/outV",myrank,sep=".");
 
 #source("rebal.r");
 x = comm.fread ("auth1", pattern="*",readers=__READERS__, quote="",sep=";",header=F)
@@ -20,7 +22,7 @@ barrier()
 comm.print("rebalanced all");
 
 names(x) = c("un","n","fn","ln","e","a");
-fwrite(x$a, file=paste("__OUT__/outL",myrank,sep="."), sep=";",quote=FALSE,append=F);
+fwrite(x[,c("a","un")], file=paste("__OUT__/outL",myrank,sep="."), sep=";",quote=FALSE,append=F);
 barrier()
 comm.print("Wrote labels");
 
@@ -36,8 +38,6 @@ names(x1)=c("n", "e", "ln", "fn", "un", "ifn","a")
 #comm.print(dxf, all.rank=TRUE)
 
 #tandem.webdev,Agence-Tandem,Agence-Tandem,Agence-Tandem,tandem.webdev@gmail.com,Agence-Tandem <tandem.webdev@gmail.com>
-myrank=comm.rank();
-fnamev=paste("__OUT__/outV",myrank,sep=".");
 
 
 if (FR == 0){
