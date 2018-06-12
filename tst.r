@@ -22,7 +22,7 @@ barrier()
 comm.print("rebalanced all");
 
 names(x) = c("un","n","fn","ln","e","a");
-fwrite(x[,c("a","un")], file=paste("__OUT__/outL",myrank,sep="."), sep=";",header=F,quote=FALSE,append=F);
+fwrite(x[,c("a","un")], file=paste("__OUT__/outL",myrank,sep="."), sep=";",col.names=FALSE,quote=FALSE,append=F);
 barrier()
 comm.print("Wrote labels");
 
@@ -43,6 +43,7 @@ names(x1)=c("n", "e", "ln", "fn", "un", "ifn","a")
 if (FR == 0){
   pairs = compare.linkage (x, x1, exclude=c(7),strcmp=c(1:6),strcmpfun = jarowinkler);
   comm.print(paste("Computed self pairs for rank", myrank));
+  #fwrite(pairs$data1[,c("a","un")],file=paste("__OUT__/outL1",myrank,sep="."), sep=";",col.names=FALSE,quote=FALSE,append=F); 
   #barrier()
   #predict and write out matches
   MM=apply(pairs$pairs[,c("n", "e", "ln", "fn", "un", "ifn")],1,max, na.rm = T)>.8&pairs$pairs$id1 != pairs$pairs$id2;
