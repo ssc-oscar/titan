@@ -20,7 +20,7 @@ barrier()
 comm.print("rebalanced all");
 
 names(x) = c("un","n","fn","ln","e","a");
-fwrite(file=paste("__OUT__/outL",myrank,sep="."), sep=";",quote=FALSE,append=F);
+fwrite(x$a, file=paste("__OUT__/outL",myrank,sep="."), sep=";",quote=FALSE,append=F);
 barrier()
 comm.print("Wrote labels");
 
