@@ -5,14 +5,14 @@ suppressMessages(library(pbdIO,quietly = TRUE))
 suppressMessages(library('data.table', quietly = TRUE))
 suppressMessages(library('RecordLinkage', lib.loc="./R/x86_64-pc-linux-gnu-library/3.3", quietly = TRUE))
 
-FR = __FROM__;
-TO = __TO__;
+FR = 0;
+TO = 1;
 
 init()
 #Rprof(append = TRUE)
 
 #source("rebal.r");
-x = comm.fread ("auth1", pattern="*",readers=__READERS__, quote="",sep=";",header=F)
+x = comm.fread ("auth4096", pattern="*",readers=256, quote="",sep=";",header=F)
 barrier()
 comm.print("read all");
 x = pbdIO:::comm.rebalance.df(x);
@@ -20,7 +20,7 @@ barrier()
 comm.print("rebalanced all");
 
 names(x) = c("un","n","fn","ln","e","a");
-fwrite(file=paste("__OUT__/outL",myrank,sep="."), sep=";",quote=FALSE,append=F);
+fwrite(file=paste("4096_0-1/outL",myrank,sep="."), sep=";",quote=FALSE,append=F);
 barrier()
 comm.print("Wrote labels");
 
@@ -37,7 +37,7 @@ names(x1)=c("n", "e", "ln", "fn", "un", "ifn","a")
 
 #tandem.webdev,Agence-Tandem,Agence-Tandem,Agence-Tandem,tandem.webdev@gmail.com,Agence-Tandem <tandem.webdev@gmail.com>
 myrank=comm.rank();
-fnamev=paste("__OUT__/outV",myrank,sep=".");
+fnamev=paste("4096_0-1/outV",myrank,sep=".");
 
 
 if (FR == 0){
