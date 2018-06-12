@@ -5,14 +5,14 @@ suppressMessages(library(pbdIO,quietly = TRUE))
 suppressMessages(library('data.table', quietly = TRUE))
 suppressMessages(library('RecordLinkage', lib.loc="./R/x86_64-pc-linux-gnu-library/3.3", quietly = TRUE))
 
-FR = __FROM__;
-TO = __TO__;
+FR = 2;
+TO = 1023;
 
 init()
 #Rprof(append = TRUE)
 
 #source("rebal.r");
-x = comm.fread ("auth1", pattern="*",readers=__READERS__, quote="",sep=";",header=F)
+x = comm.fread ("auth4096", pattern="*",readers=256, quote="",sep=";",header=F)
 barrier()
 comm.print("read all");
 x = pbdIO:::comm.rebalance.df(x);
@@ -33,7 +33,7 @@ names(x1)=c("n", "e", "ln", "fn", "un", "ifn","a")
 
 #tandem.webdev,Agence-Tandem,Agence-Tandem,Agence-Tandem,tandem.webdev@gmail.com,Agence-Tandem <tandem.webdev@gmail.com>
 myrank=comm.rank();
-fnamev=paste("__OUT__/outV",myrank,sep=".");
+fnamev=paste("4096_2-1023/outV",myrank,sep=".");
 
 
 if (FR == 0){
