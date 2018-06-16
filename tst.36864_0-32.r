@@ -6,9 +6,10 @@ suppressMessages(library('data.table', quietly = TRUE))
 suppressMessages(library('RecordLinkage', lib.loc="./R/x86_64-pc-linux-gnu-library/3.3", quietly = TRUE))
 
 FR = 0;
-TO = 32;
+TO = 1;
 
 init()
+ptm <- proc.time()
 #Rprof(append = TRUE)
 myrank=comm.rank();
 fnamev=paste("36864_0-32/outV",myrank,sep=".");
@@ -24,7 +25,8 @@ names(x) = c("un","n","fn","ln","e","a");
 fwrite(x[,c("a","un")], file=paste("36864_0-32/outL",myrank,sep="."), sep=";",col.names=FALSE,quote=FALSE,append=F);
 barrier()
 comm.print("Wrote labels");
-
+ptm1=proc.time();
+comm.print(ptm1 - ptm);
 x =  x[,c("n", "e", "ln", "fn", "un", "fn","a")];
 x1 = x[,c("n", "e", "ln", "fn", "un", "ln","a")];
 names(x)=c("n", "e", "ln", "fn", "un", "ifn","a")
@@ -40,8 +42,13 @@ names(x1)=c("n", "e", "ln", "fn", "un", "ifn","a")
 
 
 if (FR == 0){
+  ptm1=proc.time();
+  comm.print(proc.time() - ptm);
   pairs = compare.linkage (x, x1, exclude=c(7),strcmp=c(1:6),strcmpfun = jarowinkler);
-  comm.print(paste("Computed self pairs for rank", myrank));
+  ptm1=proc.time();
+  dif = proc.time() - ptm;
+  str = paste("Computed self pairs for rank", myrank, paste(dif,collapse=""));
+  comm.print(str, allranks=T);
   #fwrite(pairs$data1[,c("a","un")],file=paste("36864_0-32/outL1",myrank,sep="."), sep=";",col.names=FALSE,quote=FALSE,append=F); 
   #barrier()
   #predict and write out matches
