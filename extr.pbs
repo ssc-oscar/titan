@@ -1,0 +1,12 @@
+#!/bin/bash
+# File name: my-job-name.pbs
+
+#PBS -N EXTR.NNN
+#PBS -A csc229
+#PBS -l walltime=00:30:00
+#PBS -l nodes=1
+#PBS -l gres=atlas1%atlas2
+
+cd $MEMBERWORK/csc229/id
+i=NNN
+seq $i $(($i+15)) | while read j; do  echo $j; done | perl map1.perl | gzip > 4096_out/$i
