@@ -13,7 +13,6 @@ init()
 myrank=comm.rank();
 fnamev=paste("__OUT__/outV",myrank,sep=".");
 
-#source("rebal.r");
 x = comm.fread ("auth1", pattern="*",readers=__READERS__, quote="",sep=";",header=F)
 barrier()
 comm.print("read all");
@@ -101,12 +100,6 @@ for (i in max(1,FR):min(TO,nc)){
   comm.print(c(ll,dim(p)));
 }
 
-#comm.print(lbl[1:10,], all.rank=TRUE)
 barrier ();
 comm.print ("Finished computing");
-##fnamel=paste("outL",myrank,sep=".");
-##fwrite(data.frame(lbl),file=fnamel, sep=";",quote=FALSE);
-#fnamev=paste("outV",myrank,sep=".");
-#fwrite(data.frame(val),file=fnamev, sep=";",quote=FALSE);
-#barrier();
-#finalize();
+finalize();
