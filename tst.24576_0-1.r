@@ -5,29 +5,43 @@ suppressMessages(library('data.table', quietly = TRUE))
 suppressMessages(library('RecordLinkage', lib.loc="./R/x86_64-pc-linux-gnu-library/3.3", quietly = TRUE))
 
 FR = 0;
-TO = 6;
+TO = 1;
 
 init()
+ptm <- proc.time()
 #Rprof(append = TRUE)
+myrank=comm.rank();
+fnamev=paste("24576_0-1/outV",myrank,sep=".");
 
-x = comm.fread ("auth32", pattern="*",quote="",sep=";",header=F)
+x = comm.fread ("auth24576", pattern="*",readers=1536, quote="",sep=";",header=F)
+barrier()
+comm.print("read all");
+x = pbdIO:::comm.rebalance.df(x);
+barrier()
+comm.print("rebalanced all");
+
 names(x) = c("un","n","fn","ln","e","a");
+fwrite(x[,c("a","un")], file=paste("24576_0-1/outL",myrank,sep="."), sep=";",col.names=FALSE,quote=FALSE,append=F);
+barrier()
+comm.print("Wrote labels");
+ptm1=proc.time();
+comm.print(ptm1 - ptm);
 x =  x[,c("n", "e", "ln", "fn", "un", "fn","a")];
 x1 = x[,c("n", "e", "ln", "fn", "un", "ln","a")];
 names(x)=c("n", "e", "ln", "fn", "un", "ifn","a")
 names(x1)=c("n", "e", "ln", "fn", "un", "ifn","a")
 
-barrier()
-comm.print("read all");
-
-myrank=comm.rank();
-fnamev=paste("32_0-6/outV",myrank,sep=".");
-
 
 if (FR == 0){
+  ptm1=proc.time();
+  comm.print(proc.time() - ptm);
   pairs = compare.linkage (x, x1, exclude=c(7),strcmp=c(1:6),strcmpfun = jarowinkler);
-  barrier()
-  comm.print("Computed self pairs");
+  ptm1=proc.time();
+  dif = proc.time() - ptm;
+  str = paste("Computed self pairs for rank", myrank, paste(dif,collapse=""));
+  comm.print(str);
+  #fwrite(pairs$data1[,c("a","un")],file=paste("36864_0-32/outL1",myrank,sep="."), sep=";",col.names=FALSE,quote=FALSE,append=F); 
+  #barrier()
   #predict and write out matches
   MM=apply(pairs$pairs[,c("n", "e", "ln", "fn", "un", "ifn")],1,max, na.rm = T)>.8&pairs$pairs$id1 != pairs$pairs$id2;
   val = c();
@@ -39,9 +53,11 @@ if (FR == 0){
     b = a;
     p$a = a;
     p$b = b
+    #val = data.frame(cbind(a, b, p));
     fwrite(p,file=fnamev, sep=";",quote=FALSE,append=T);
     rm(val)
   }
+  comm.print(paste("Wrote self pairs for rank", myrank));
 }
 
 message.pass <- function(off=1) {
@@ -69,7 +85,6 @@ for (i in max(1,FR):min(TO,nc)){
   MM=apply(pairs$pairs[,c("n", "e", "ln", "fn", "un", "ifn")],1,max,na.rm = T)>.8;
   ll = sum(MM);
   p = pairs$pairs[MM,-9];
-  comm.print(c(ll,dim(p)));
   if (ll > 0){
      orank = (myrank-i)%%ncom;
      a = rep(myrank,ll);
@@ -80,10 +95,9 @@ for (i in max(1,FR):min(TO,nc)){
      #val = rbind(val, val0);
      fwrite(p,file=fnamev, sep=";",quote=FALSE,append=T);
   }
+  comm.print(c(ll,dim(p)));
 }
 
-barrier();
-comm.print("Finished computing");
+barrier ();
+comm.print ("Finished computing");
 finalize();
-q();
-
