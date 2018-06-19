@@ -9,4 +9,4 @@
 
 module load r/3.4.2
 cd $MEMBERWORK/csc229/id
-aprun -n 1 Rscript pred.NNN.r
+Rscript pred.NNN.r
