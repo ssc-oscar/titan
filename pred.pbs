@@ -3,7 +3,7 @@
 
 #PBS -N PRED.NNN
 #PBS -A csc229
-#PBS -l walltime=00:30:00
+#PBS -l walltime=02:30:00
 #PBS -l nodes=1
 #PBS -l gres=atlas1%atlas2
 
