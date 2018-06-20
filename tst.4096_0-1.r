@@ -1,5 +1,4 @@
 suppressMessages(library(pbdMPI,quietly = TRUE))
-suppressMessages(library(pbdDMAT,quietly = TRUE))
 suppressMessages(library(pbdIO,quietly = TRUE))
 .libPaths('./R/x86_64-pc-linux-gnu-library/3.3')
 suppressMessages(library('data.table', quietly = TRUE))
@@ -10,10 +9,11 @@ TO = 1;
 
 init()
 #Rprof(append = TRUE)
+ptm <- proc.time()
+
 myrank=comm.rank();
 fnamev=paste("4096_0-1/outV",myrank,sep=".");
 
-#source("rebal.r");
 x = comm.fread ("auth4096", pattern="*",readers=256, quote="",sep=";",header=F)
 barrier()
 comm.print("read all");
@@ -22,27 +22,25 @@ barrier()
 comm.print("rebalanced all");
 
 names(x) = c("un","n","fn","ln","e","a");
-fwrite(x[,c("a","un")], file=paste("4096_0-1/outL",myrank,sep="."), sep=";",quote=FALSE,append=F);
+fwrite(x[,c("a","un")], file=paste("4096_0-1/outL",myrank,sep="."), sep=";",col.names=FALSE,quote=FALSE,append=F);
 barrier()
+dif = proc.time() - ptm;
+comm.print(dif);
 comm.print("Wrote labels");
 
 x =  x[,c("n", "e", "ln", "fn", "un", "fn","a")];
 x1 = x[,c("n", "e", "ln", "fn", "un", "ln","a")];
 names(x)=c("n", "e", "ln", "fn", "un", "ifn","a")
 names(x1)=c("n", "e", "ln", "fn", "un", "ifn","a")
-#dx = dim(x);
-#comm.print(dx, all.rank=TRUE)
-
-#xf <- do.call('rbind',allgather(x))
-#dxf = dim(xf);
-#comm.print(dxf, all.rank=TRUE)
-
-#tandem.webdev,Agence-Tandem,Agence-Tandem,Agence-Tandem,tandem.webdev@gmail.com,Agence-Tandem <tandem.webdev@gmail.com>
 
 
 if (FR == 0){
   pairs = compare.linkage (x, x1, exclude=c(7),strcmp=c(1:6),strcmpfun = jarowinkler);
-  comm.print(paste("Computed self pairs for rank", myrank));
+  dif = proc.time() - ptm;
+  comm.print(dif);
+  str = paste("Computed self pairs for rank", myrank, paste(dif,collapse=""));
+  comm.print(str);
+  #fwrite(pairs$data1[,c("a","un")],file=paste("4096_0-1/outL1",myrank,sep="."), sep=";",col.names=FALSE,quote=FALSE,append=F); 
   #barrier()
   #predict and write out matches
   MM=apply(pairs$pairs[,c("n", "e", "ln", "fn", "un", "ifn")],1,max, na.rm = T)>.8&pairs$pairs$id1 != pairs$pairs$id2;
@@ -50,7 +48,8 @@ if (FR == 0){
   ll = sum(MM);
   if (ll > 0){
     p = pairs$pairs[MM,-9];
-    comm.print(c(ll,dim(p)))
+    str = c(ll,dim(p));
+    comm.print(str)
     a = rep(myrank,ll);
     b = a;
     p$a = a;
@@ -100,12 +99,6 @@ for (i in max(1,FR):min(TO,nc)){
   comm.print(c(ll,dim(p)));
 }
 
-#comm.print(lbl[1:10,], all.rank=TRUE)
 barrier ();
 comm.print ("Finished computing");
-##fnamel=paste("outL",myrank,sep=".");
-##fwrite(data.frame(lbl),file=fnamel, sep=";",quote=FALSE);
-#fnamev=paste("outV",myrank,sep=".");
-#fwrite(data.frame(val),file=fnamev, sep=";",quote=FALSE);
-#barrier();
-#finalize();
+pbdMPI::finalize()

@@ -1,0 +1,15 @@
+#!/bin/bash
+#    Begin PBS directives
+#PBS -A csc229
+#PBS -N testpbdR_out
+#PBS -j oe
+#PBS -l walltime=00:30:00,nodes=256
+#PBS -l gres=atlas1%atlas2
+module load r/3.3.2x
+cd $MEMBERWORK/csc229/id
+#date
+THREADS=4096
+#export OMP_NUM_THREADS=$THREADS
+echo START $(date +"%s")
+aprun -n $THREADS -N16 Rscript tst.4096_0-1.r 
+echo END $(date +"%s")
