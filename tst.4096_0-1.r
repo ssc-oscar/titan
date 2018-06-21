@@ -13,6 +13,8 @@ ptm <- proc.time()
 
 myrank=comm.rank();
 fnamev=paste("4096_0-1/outV",myrank,sep=".");
+ncom = comm.size();
+nc = ceiling(ncom/2);
 
 x = comm.fread ("auth4096", pattern="*",readers=256, quote="",sep=";",header=F)
 barrier()
@@ -29,13 +31,16 @@ comm.print(dif);
 comm.print("Wrote labels");
 
 x =  x[,c("n", "e", "ln", "fn", "un", "fn","a")];
-x1 = x[,c("n", "e", "ln", "fn", "un", "ln","a")];
-names(x)=c("n", "e", "ln", "fn", "un", "ifn","a")
-names(x1)=c("n", "e", "ln", "fn", "un", "ifn","a")
+x$rank=myrank;
+#x1 = x[,c("n", "e", "ln", "fn", "un", "ln","a","rank")];
+names(x)=c("n", "e", "ln", "fn", "un", "ifn","a","rank");
+#names(x1)=c("n", "e", "ln", "fn", "un", "ifn","a","rank");
 
 
 if (FR == 0){
-  pairs = compare.linkage (x, x1, exclude=c(7),strcmp=c(1:6),strcmpfun = jarowinkler);
+  x1 = x[,c("n", "e", "ln", "fn", "un", "ln","a","rank")];
+  names(x1)=c("n", "e", "ln", "fn", "un", "ifn","a","rank");
+  pairs = compare.linkage (x, x1, exclude=c(7,8),strcmp=c(1:6),strcmpfun = jarowinkler);
   dif = proc.time() - ptm;
   comm.print(dif);
   str = paste("Computed self pairs for rank", myrank, paste(dif,collapse=""));
@@ -61,28 +66,30 @@ if (FR == 0){
   comm.print(paste("Wrote self pairs for rank", myrank));
 }
 
-message.pass <- function(off=1) {
- myrank <- comm.rank()
- otherrank <- (myrank+off) %% comm.size()
+message.pass <- function(off, rnk) {
+ otherrank <- (rnk+off) %% ncom;
  # Send a message to the partner
- #comm.print(paste("passed to ",c(myrank,otherrank)),all.rank=TRUE)
- isend (x1[,c("n", "e", "ln", "fn", "un", "ifn","a")], rank.dest=otherrank);
+ comm.print(paste("passed to ",c(rnk,otherrank)));#,all.rank=TRUE)
+ isend (x[,c("n", "e", "ln", "fn", "un", "ln","a","rank")], rank.dest=otherrank);
 }
 
-message.get <- function(off=1) {
- myrank <- comm.rank();
- otherrank <- (myrank-off) %% comm.size();
+message.get <- function(off, rnk) {
+ otherrank <- (rnk-off) %% ncom;
  # Receive the message
- comm.print(paste("about to rcv ", paste(myrank,otherrank)))
+ comm.print(paste("about to rcv ", paste(rnk,otherrank)))
  irecv(rank.source=otherrank);
+ #irecv();
 }
-ncom = comm.size();
-nc = ceiling(comm.size()/2);
 
 for (i in max(1,FR):min(TO,nc)){
-  message.pass(i);
-  x1=message.get(i);
-  pairs = compare.linkage (x, x1, exclude=c(7),strcmp=c(1:6),strcmpfun = jarowinkler);
+  otherrankP <- (myrank+i) %% ncom;
+  isend (x[,c("n", "e", "ln", "fn", "un", "ln","a","rank")], rank.dest=otherrankP);
+  otherrankR <- (myrank-i) %% ncom;
+  x2 = irecv(rank.source=otherrankR);
+  #message.pass (i, myrank);
+  #x2 = message.get (i, myrank);
+  names(x2)=c("n", "e", "ln", "fn", "un", "ifn","a","rank");
+  pairs = compare.linkage (x, x2, exclude=c(7,8),strcmp=c(1:6),strcmpfun = jarowinkler);
   MM=apply(pairs$pairs[,c("n", "e", "ln", "fn", "un", "ifn")],1,max,na.rm = T)>.8;
   ll = sum(MM);
   p = pairs$pairs[MM,-9];
@@ -93,10 +100,15 @@ for (i in max(1,FR):min(TO,nc)){
      #val0 = cbind (a, b, p);
      p$a=a;
      p$b=b;
+     p$of = i;
+     p$a1 = pairs$data1[p$id1,"a"]
+     p$a2 = pairs$data2[p$id2,"a"]
+     p$a2r = pairs$data2[p$id2,"rank"]
      #val = rbind(val, val0);
      fwrite(p,file=fnamev, sep=";",quote=FALSE,append=T);
   }
-  comm.print(c(ll,dim(p)));
+  comm.print(c(ll,dim(p),otherrankR));
+  #barrier();
 }
 
 barrier ();
