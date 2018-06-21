@@ -4,19 +4,19 @@ suppressMessages(library(pbdIO,quietly = TRUE))
 suppressMessages(library('data.table', quietly = TRUE))
 suppressMessages(library('RecordLinkage', lib.loc="./R/x86_64-pc-linux-gnu-library/3.3", quietly = TRUE))
 
-FR = __FROM__;
-TO = __TO__;
+FR = 2;
+TO = 20;
 
 init()
 #Rprof(append = TRUE)
 ptm <- proc.time()
 
 myrank=comm.rank();
-fnamev=paste("__OUT__/outV",myrank,sep=".");
+fnamev=paste("4096_2-20/outV",myrank,sep=".");
 ncom = comm.size();
 nc = ceiling(ncom/2);
 
-x = comm.fread ("auth1", pattern="*",readers=__READERS__, quote="",sep=";",header=F)
+x = comm.fread ("auth4096", pattern="*",readers=256, quote="",sep=";",header=F)
 barrier()
 comm.print("read all");
 x = pbdIO:::comm.rebalance.df(x);
@@ -24,7 +24,7 @@ barrier()
 comm.print("rebalanced all");
 
 names(x) = c("un","n","fn","ln","e","a");
-fwrite(x[,c("a","un")], file=paste("__OUT__/outL",myrank,sep="."), sep=";",col.names=FALSE,quote=FALSE,append=F);
+fwrite(x[,c("a","un")], file=paste("4096_2-20/outL",myrank,sep="."), sep=";",col.names=FALSE,quote=FALSE,append=F);
 barrier()
 dif = proc.time() - ptm;
 comm.print(dif);
@@ -45,7 +45,7 @@ if (FR == 0){
   comm.print(dif);
   str = paste("Computed self pairs for rank", myrank, paste(dif,collapse=""));
   comm.print(str);
-  #fwrite(pairs$data1[,c("a","un")],file=paste("__OUT__/outL1",myrank,sep="."), sep=";",col.names=FALSE,quote=FALSE,append=F); 
+  #fwrite(pairs$data1[,c("a","un")],file=paste("4096_2-20/outL1",myrank,sep="."), sep=";",col.names=FALSE,quote=FALSE,append=F); 
   #barrier()
   #predict and write out matches
   MM=apply(pairs$pairs[,c("n", "e", "ln", "fn", "un", "ifn")],1,max, na.rm = T)>.8&pairs$pairs$id1 != pairs$pairs$id2;
@@ -107,7 +107,7 @@ for (i in max(1,FR):min(TO,nc)){
      #val = rbind(val, val0);
      fwrite(p,file=fnamev, sep=";",quote=FALSE,append=T);
   }
-  comm.print(c(ll,dim(p),otherrankR));
+  comm.print(c(ll,dim(p)));
   #barrier();
 }
 
