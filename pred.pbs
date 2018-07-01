@@ -9,4 +9,5 @@
 
 module load r/3.4.2
 cd $MEMBERWORK/csc229/id
+#zcat 4096_out/NNN > 4096_out/NNN.txt
 Rscript pred.NNN.r
