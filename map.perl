@@ -1,12 +1,13 @@
 use strict;
 use warnings;
 
-open A, "zcat 4096.L|";
-my %n2i;
+open A, "zcat matches.csv |";
+my (%n2i, %n2d);
 while(<A>){
   chop();
-  my ($n, $ch, $o, $off) = split (/;/, $_, -1);
+  my ($n, $fnf, $lnf, $unf, $ch, $o, $off) = split (/;/, $_, -1);
   $n2i{$n}="$ch;$o";
+  $n2d{$n}="$fnf;$lnf$unf";
 }
 
 while(<STDIN>){

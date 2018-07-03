@@ -9,4 +9,4 @@
 
 cd $MEMBERWORK/csc229/id
 i=NNN
-seq $i $(($i+15)) | while read j; do  echo $j; done | perl map1.perl | gzip > 4096_out/$i
+seq $i $(($i+15)) | while read j; do  echo $j; done | perl map1.perl > 4096_out/$i.txt

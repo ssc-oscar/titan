@@ -9,5 +9,7 @@
 
 module load r/3.4.2
 cd $MEMBERWORK/csc229/id
+i=NNN
 #zcat 4096_out/NNN > 4096_out/NNN.txt
-Rscript pred.NNN.r
+Rscript pred.$i.r
+cat 4096_out/$i.p | perl map2.perl > 4096_out/$i.p.csv
