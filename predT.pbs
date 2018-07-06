@@ -1,0 +1,19 @@
+#!/bin/bash
+# File name: my-job-name.pbs
+
+#PBS -N PRED.NNN
+#PBS -A csc229
+#PBS -l walltime=02:00:00
+#PBS -l nodes=16
+#PBS -l gres=atlas1%atlas2
+
+#module load r/3.4.2
+module load r/3.3.2x
+echo START $(date +"%s")
+cd $MEMBERWORK/csc229/id
+i=NNN
+NT=$((16*16))
+#zcat 4096_out/NNN > 4096_out/NNN.txt
+aprun -n $NT -N16 Rscript predT.$i.r
+echo END $(date +"%s")
+#cat 4096_tout/$i.[0-9]* | perl map2.perl > 4096_tout/$i.p.csv
