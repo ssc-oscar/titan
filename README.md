@@ -17,7 +17,7 @@ the locally installed modules may be removed
 ```
 module load r/3.3.2x
 R --no-save
-install.packages('RecordLinkage')
+install.packages(c("ff", "fastmatch", "bit", "ffbase", "e1071", "lava", "prodlim","ada", "ipred", "evd", 'RecordLinkage'))
 ```
 
 edit r.pbs as neede: nodes/tasks (tasks=nodes*16)
