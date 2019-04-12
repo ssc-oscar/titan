@@ -2,6 +2,40 @@
 
 ```
 ssh titan
+mkdir -p ~/csc344/proj-shared/id
+cd ~/csc344/proj-shared/id
+rm -rf .git
+git clone gh:ssc-oscar/titan .
+cc -O3 -o jwt jarowinklerm.c 
+module load r/3.3.2x
+echo 'install.packages(c("ff", "fastmatch", "bit", "ffbase", "e1071", "lava", "prodlim","ada", "ipred", "evd", "RecordLinkage"), lib=".")' | R --no-save
+
+#get a complete list of author strings for data version N
+scp -p da0:/data/basemaps/gz/asN.s .
+
+#prepare text features for comparison
+zcat asN.s |  grep -v '^$'| perl -I /da3_data/lookup/ -I ~/lib64/perl5 -ane 'use cmt;use Compress::LZF;chop();$a=$_;@x=git_signature_parse($a); $fn=$x[0];$ln=$x[0];$fn=~s/\s.*//;$ln=~s/\s*$//;$ln=~s/.*\s//;$u=$x[1];$u=~s/\@.*//;print "$u;$x[0];$fn;$ln;$x[1];$a\n"' | gzip > asfeaturesN.gz
+```
+
+Try 4096 nodes, just two iterations
+```
+n=4096
+fr=0
+to=1
+p=$(($n/16))
+mkdir auth$n
+head -2000000 asfeaturesN > asfeaturesN2M
+split -n r/$n asfeaturesN2M auth$n/a.
+mkdir ${n}_${fr}-$to
+sed "s/__OUT__/${n}_${fr}-$to/;s/__FROM__/$fr/;s/__TO__/$to/;s/auth1/auth$n/;s/__READERS__/$p/" tst.r > tst.${n}_${fr}-$to.r
+sed "s/tst.r/tst.${n}_${fr}-$to.r/;s/walltime=02:00/walltime=00:30/;s/nodes=2/nodes=$p/;s/THREADS=32/THREADS=$n/" r.pbs > r${n}_${fr}-$to.pbs
+qsub r${n}_${fr}-$to.pbs
+
+```
+
+# Below is the code used fot EMSE paper
+```
+ssh titan
 cd     csc229/scratch/audris1/id
 ```
 
