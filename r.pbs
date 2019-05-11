@@ -3,12 +3,12 @@
 #PBS -A csc344
 #PBS -N testpbdR_out
 #PBS -j oe
-#PBS -l walltime=02:00:00,nodes=20
+#PBS -l walltime=02:00:00,nodes=NNODES
 #PBS -l gres=atlas1%atlas2
 module load r/3.3.2x
 cd $PROJWORK/csc344/id
 #date
-export OMP_NUM_THREADS=320
+export OMP_NUM_THREADS=NTHREADS
 echo START $(date +"%s")
-aprun -n 320 -N16 Rscript tst.r 
+aprun -n NNODES -N16 Rscript tst.r 
 echo END $(date +"%s")
